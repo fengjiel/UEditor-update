@@ -2,8 +2,11 @@
 /*
 * UE
 */
-@import "@/styles/ueditor.scss";
-@import "@/styles/material-dialog.scss";
+/**
+*
+*/
+@import "./ueditor.scss";
+@import "./material-dialog.scss";
 .editor-area {
     min-height: 400px;
     border: 1px solid #ccc;
@@ -560,6 +563,7 @@ export default {
         emitHandleChange() {
             this.handleChange({
                 html: this.editor.getContent(),
+				txt: this.editor.getContentTxt(),
                 count: this.wordNumber,
                 exceed: this.wordExceed
             });
